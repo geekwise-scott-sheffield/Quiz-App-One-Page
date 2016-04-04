@@ -20,16 +20,41 @@
         <!--Container that will hold the "next question" button after an answer is clicked-->
         <div class="col s2" id="nextQuestionContainer">
             <h5 id="hidePlaceHolder">Please Answer</h5>
-
             <!--initially hidden "next" button-->
             <button class=" hoverable toggle-hide" id="nextQ">To The Quiz!</button>
         </div>
 
         <!--number of questions answered in fraction location-->
         <div class="col s5" id="completedFraction">
-            <span class="completionText"><b id="number">Tutorial</b> out of 5</span>
+            <span class="completionText"><b id="number">One</b> out of Five</span>
         </div>
     </nav>
+
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+    <!--SEPARATION OF NAV AND MAIN INTERACTION AREA-->
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+    <!--question area section, user interactable-->
+    <main class="row">
+        <!--question container-->
+        <div id="questionContainer" class="col s5 left">
+            <p>Question:</p>
+            <div id="Question">
+                <h4>question placeholder text</h4>
+            </div>
+        </div>
+
+        <!--vertical line break-->
+        <!--<div id="vertical-line" class="col s2 left">|</div>-->
+
+        <!--true/false answer container-->
+        <div id="answerContainer" class="col s5 right">
+            <p>Response:</p>
+            <button id="btn-true" class="btn-true-false">True</button>
+            <button id="btn-false" class="btn-true-false">False</button>
+        </div>
+
+    </main>
 
     </body>
     <script src="js/script.js"></script>
