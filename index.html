@@ -9,27 +9,25 @@
 
     <body>
 
-    <!--statistics section, non interactive with user-->
+    <!--header information section, non interactive with user-->
     <nav class="row">
         <!--subject the user is being questioned on-->
-        <div class="col s5" id="subject">
-            <span>SUBJECT: </span>
-            <span>Getting Familiar</span>
+        <div class="col s5" id="subjectContainer">
+            <span class="subject">SUBJECT: </span>
+            <span class="subject">Music</span>
         </div>
 
         <!--Container that will hold the "next question" button after an answer is clicked-->
         <div class="col s2" id="nextQuestionContainer">
-            <h5 id="hidePlaceHolder">i'll go away soon!</h5>
+            <h5 id="hidePlaceHolder">Please Answer</h5>
 
             <!--initially hidden "next" button-->
-            <a href="question1.html">
-                <button class=" hoverable toggle-hide" id="nextQ">To The Quiz!</button>
-            </a>
+            <button class=" hoverable toggle-hide" id="nextQ">To The Quiz!</button>
         </div>
 
         <!--number of questions answered in fraction location-->
         <div class="col s5" id="completedFraction">
-            <h4> <b id="number">Tutorial</b> out of 5</h4>
+            <span class="completionText"><b id="number">Tutorial</b> out of 5</span>
         </div>
     </nav>
 
