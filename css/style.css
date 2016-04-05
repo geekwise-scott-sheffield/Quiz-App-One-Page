@@ -13,29 +13,42 @@ html,body{
 nav{
     width: 100%;
     height: 10%;
+    overflow: hidden;
 }
 #subjectContainer{
     text-align: center;
+    overflow: hidden;
 }
 .subject{
     font-size: 2.3rem;
+    overflow: hidden;
 }
 #nextQuestionContainer{
     text-align: center;
-}
-#nextQ{
-    float: none;
-    margin: auto;
-    background-color: #5cb85c;
-    height: 4.2rem;
-    width: 9rem;
-    display: none;
+    overflow: hidden;
 }
 #completedFraction{
     text-align: center;
+    overflow: hidden;
 }
 .completionText{
     font-size: 2.3rem;
+    overflow: hidden;
+}
+
+/*universal correct/incorrect box notifier*/
+#green-red-box-container{
+    width: 100%;
+    height: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    align-content: center;
+}
+.boxes{
+    border: 1px solid black;
+    text-align: center;
+    height: 3.3rem
 }
 
 
@@ -72,4 +85,7 @@ main{
 #question-two{ display: none; }
 #question-three{ display: none; }
 #question-four{ display: none; }
-#question-five{ display: none; }
+#thanks{
+    text-align: center;
+    display: none;
+}

@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Document</title>
+        <title>Mucic Quiz App: v1.0</title>
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
     </head>
@@ -14,19 +14,17 @@
         <!--subject the user is being questioned on-->
         <div class="col s5" id="subjectContainer">
             <span class="subject">SUBJECT: </span>
-            <span class="subject">Music</span>
+            <span class="subject">Music & Musicians</span>
         </div>
 
         <!--Container that will hold the "next question" button after an answer is clicked-->
         <div class="col s2" id="nextQuestionContainer">
-            <h5 id="hidePlaceHolder">Please Answer</h5>
-            <!--initially hidden "next" button-->
-            <button class=" hoverable toggle-hide" id="nextQ">To The Quiz!</button>
+            <h5 id="hidePlaceHolder">Please Answer The Questions</h5>
         </div>
 
         <!--number of questions answered in fraction location-->
         <div class="col s5" id="completedFraction">
-            <span class="completionText"><b id="number">One</b> out of Five</span>
+            <span class="completionText"><b id="number">One</b> out of Four</span>
         </div>
     </nav>
 
@@ -36,8 +34,15 @@
 
     <!--question area section, user interactable-->
     <main>
-        <!--sections define the start and end of unique questions-->
 
+        <div id="green-red-box-container" class="row">
+            <div id="box-1" class="boxes col s1 left offset-s1 hoverable" >First Question</div>
+            <div id="box-2" class="boxes col s1 left offset-s2 hoverable" >Second Question</div>
+            <div id="box-3" class="boxes col s1 left offset-s2 hoverable" >Third Question</div>
+            <div id="box-4" class="boxes col s1 left offset-s2 hoverable" >Fourth Question</div>
+        </div>
+
+        <!--sections define the start and end of unique questions-->
         <!--~~~~~~~~~~~~-->
         <!--QUESTION ONE-->
         <!--~~~~~~~~~~~~-->
@@ -46,15 +51,15 @@
             <div class="questionContainer col s5 left">
                 <p>Question:</p>
                 <div class="Question">
-                    <h4>question placeholder text</h4>
+                    <h4>Portland Oregon is known as the home of Grunge Rock</h4>
                 </div>
             </div>
 
             <!--true/false answer container-->
             <div class="answerContainer col s5 right">
                 <p>Response:</p>
-                <button class="btn-true btn-true-false">True</button>
-                <button class="btn-false btn-true-false">False</button>
+                <button onclick="show2Question(); incorrect1()" class="btn-true btn-true-false">True</button>
+                <button onclick="show2Question(); correct1()" class="btn-false btn-true-false">False</button>
             </div>
         </section>
 
@@ -66,15 +71,15 @@
             <div class="questionContainer col s5 left">
                 <p>Question:</p>
                 <div class="Question">
-                    <h4>question placeholder text</h4>
+                    <h4>Michael Jackson was known as the King of Pop</h4>
                 </div>
             </div>
 
             <!--true/false answer container-->
             <div class="answerContainer col s5 right">
                 <p>Response:</p>
-                <button class="btn-true btn-true-false">True</button>
-                <button class="btn-false btn-true-false">False</button>
+                <button onclick="show3Question(); correct2()" class="btn-true btn-true-false">True</button>
+                <button onclick="show3Question(); incorrect2()" class="btn-false btn-true-false">False</button>
             </div>
         </section>
 
@@ -86,15 +91,15 @@
             <div class="questionContainer col s5 left">
                 <p>Question:</p>
                 <div class="Question">
-                    <h4>question placeholder text</h4>
+                    <h4>Italian Electro Artist "Benny Benassi" was made an overnight sensation wit his song Right On Time</h4>
                 </div>
             </div>
 
             <!--true/false answer container-->
             <div class="answerContainer col s5 right">
                 <p>Response:</p>
-                <button class="btn-true btn-true-false">True</button>
-                <button class="btn-false btn-true-false">False</button>
+                <button onclick="show4Question(); incorrect3()" class="btn-true btn-true-false">True</button>
+                <button onclick="show4Question(); correct3()" class="btn-false btn-true-false">False</button>
             </div>
         </section>
 
@@ -106,36 +111,21 @@
             <div class="questionContainer col s5 left">
                 <p>Question:</p>
                 <div class="Question">
-                    <h4>question placeholder text</h4>
+                    <h4>Former Nirvana bassist Dave Ghrol Has been a part of OVER 10 bands in his entire career</h4>
                 </div>
             </div>
 
             <!--true/false answer container-->
             <div class="answerContainer col s5 right">
                 <p>Response:</p>
-                <button class="btn-true btn-true-false">True</button>
-                <button class="btn-false btn-true-false">False</button>
+                <button onclick="showThanks(); correct4()" class="btn-true btn-true-false">True</button>
+                <button onclick="showThanks(); incorrect4()" class="btn-false btn-true-false">False</button>
             </div>
         </section>
 
-        <!--~~~~~~~~~~~~~-->
-        <!--QUESTION FIVE-->
-        <!--~~~~~~~~~~~~~-->
-        <section id="question-five" class="row">
-            <!--question container-->
-            <div class="questionContainer col s5 left">
-                <p>Question:</p>
-                <div class="Question">
-                    <h4>question placeholder text</h4>
-                </div>
-            </div>
-
-            <!--true/false answer container-->
-            <div class="answerContainer col s5 right">
-                <p>Response:</p>
-                <button class="btn-true btn-true-false">True</button>
-                <button class="btn-false btn-true-false">False</button>
-            </div>
+        <section id="thanks">
+            <h1>Thank You For Playing!</h1>
+            <h3>Have A Wonderful Day</h3>
         </section>
 
     </main>
